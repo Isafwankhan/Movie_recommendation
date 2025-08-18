@@ -1,13 +1,19 @@
 import streamlit as st
 import requests
 import random
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # =========================================================================
 # Configuration
 # =========================================================================
 
 # The API key for The Movie Database (TMDb).
-API_KEY = "18f5529a037e94bba4fb6758311b0015"
+API_KEY = os.getenv("API_KEY")
+
 BASE_URL = "https://api.themoviedb.org/3"
 POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500/"
 
