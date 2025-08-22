@@ -12,9 +12,8 @@ load_dotenv()
 # =========================================================================
 
 # The API key for The Movie Database (TMDb).
-api_key = os.getenv("API_KEY")
-if not api_key:
-    raise ValueError("GOOGLE_API_KEY not found in environment variables.")
+API_KEY = os.getenv("API_KEY")
+
 BASE_URL = "https://api.themoviedb.org/3"
 POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500/"
 
@@ -385,6 +384,7 @@ if st.session_state.current_view in ['search', 'surprise']:
         st.session_state.recommendations_list = []
         st.session_state.current_view = 'trending'
         st.rerun()
+
 
 
 
