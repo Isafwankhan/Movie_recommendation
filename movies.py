@@ -2,17 +2,17 @@ import streamlit as st
 import requests
 import random
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 # Load environment variables from .env file
-# load_dotenv()
+load_dotenv()
 
 # =========================================================================
 # Configuration
 # =========================================================================
 
 # The API key for The Movie Database (TMDb).
-# API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("API_KEY")
 
 BASE_URL = "https://api.themoviedb.org/3"
 POSTER_BASE_URL = "https://image.tmdb.org/t/p/w500/"
@@ -384,5 +384,6 @@ if st.session_state.current_view in ['search', 'surprise']:
         st.session_state.recommendations_list = []
         st.session_state.current_view = 'trending'
         st.rerun()
+
 
 
