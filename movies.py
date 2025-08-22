@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import random
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
@@ -384,3 +384,4 @@ if st.session_state.current_view in ['search', 'surprise']:
         st.session_state.recommendations_list = []
         st.session_state.current_view = 'trending'
         st.rerun()
+
